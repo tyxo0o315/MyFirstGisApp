@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyFirstGisApp</string>
+
+    <!-- Content descriptions for accessibility -->
+    <string name="cd_zoom_in">放大</string>
+    <string name="cd_zoom_out">缩小</string>
+    <string name="cd_home">重置视图</string>
+    <string name="cd_stats">统计面板</string>
+    <string name="cd_clear_search">清除搜索</string>
+    <string name="cd_my_location">我的位置</string>
+    <string name="cd_layers">图层控制</string>
+    <string name="cd_basemap">切换底图</string>
+</resources>

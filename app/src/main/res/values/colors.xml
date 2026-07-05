@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Surface palette -->
+    <color name="surface_deep">#0D1B2A</color>
+    <color name="surface_mid">#1E3044</color>
+    <color name="accent_mint">#00E5A0</color>
+    <color name="text_hint">#4D7A9B</color>
+    <color name="divider_light">#EEEEEE</color>
+
+    <!-- POI category colors (must match map marker symbols in categories list) -->
+    <color name="cat_landmark">#444444</color>
+    <color name="cat_traffic">#FFFF00</color>
+    <color name="cat_commercial">#8B4513</color>
+    <color name="cat_shopping">#FFA500</color>
+    <color name="cat_food">#FF0000</color>
+    <color name="cat_business">#888888</color>
+    <color name="cat_lodging">#800080</color>
+    <color name="cat_living">#008000</color>
+</resources>

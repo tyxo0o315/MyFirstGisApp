@@ -1,0 +1,63 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 道路光晕层（宽描边 + 半透明白）-->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#22FFFFFF"
+        android:strokeWidth="22"
+        android:strokeLineCap="round"
+        android:pathData="M16,90 L92,20 M18,18 L92,88 M12,52 L96,58" />
+
+    <!-- 道路实体层（银白色）-->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#B8C4D0"
+        android:strokeWidth="9"
+        android:strokeLineCap="round"
+        android:pathData="M16,90 L92,20 M18,18 L92,88 M12,52 L96,58" />
+
+    <!-- ── 定位针 1（左上区域，圆心 38,37 半径 11 针尖 38,52）── -->
+    <!-- 主体：冰蓝色 teardrop -->
+    <path
+        android:fillColor="#A8D0E8"
+        android:strokeColor="#60FFFFFF"
+        android:strokeWidth="1"
+        android:pathData="M38,26
+            A11,11 0 0,1 49,37
+            C49,46 43,50 38,52
+            C33,50 27,46 27,37
+            A11,11 0 0,0 38,26 Z" />
+    <!-- 高光圆（偏左上，白色）-->
+    <path
+        android:fillColor="#D8EFFA"
+        android:pathData="M31,31 A4,4 0 1,0 39,31 A4,4 0 1,0 31,31 Z" />
+    <!-- 中心暗点 -->
+    <path
+        android:fillColor="#1C2E40"
+        android:pathData="M34,38 A4,4 0 1,0 42,38 A4,4 0 1,0 34,38 Z" />
+
+    <!-- ── 定位针 2（中右区域，圆心 64,55 半径 11 针尖 64,70）── -->
+    <!-- 主体：冰蓝色 teardrop -->
+    <path
+        android:fillColor="#A8D0E8"
+        android:strokeColor="#60FFFFFF"
+        android:strokeWidth="1"
+        android:pathData="M64,44
+            A11,11 0 0,1 75,55
+            C75,64 69,68 64,70
+            C59,68 53,64 53,55
+            A11,11 0 0,0 64,44 Z" />
+    <!-- 高光圆 -->
+    <path
+        android:fillColor="#D8EFFA"
+        android:pathData="M57,49 A4,4 0 1,0 65,49 A4,4 0 1,0 57,49 Z" />
+    <!-- 中心暗点 -->
+    <path
+        android:fillColor="#1C2E40"
+        android:pathData="M60,57 A4,4 0 1,0 68,57 A4,4 0 1,0 60,57 Z" />
+
+</vector>
