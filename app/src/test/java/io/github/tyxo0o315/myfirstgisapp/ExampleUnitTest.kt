@@ -1,4 +1,4 @@
-package com.example.myfirstgisapp
+package io.github.tyxo0o315.myfirstgisapp
 
 import org.junit.Test
 

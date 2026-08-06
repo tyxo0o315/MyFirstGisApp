@@ -2,15 +2,17 @@ import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 val localProps = Properties().apply {
     val f = rootProject.file("local.properties")
     if (f.exists()) load(f.inputStream())
 }
+val arcgisApiKey = (localProps["arcgis.api.key"] as String?)?.trim().orEmpty()
 
 android {
-    namespace = "com.example.myfirstgisapp"
+    namespace = "io.github.tyxo0o315.myfirstgisapp"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -18,14 +20,14 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.myfirstgisapp"
+        applicationId = "io.github.tyxo0o315.myfirstgisapp"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "ARCGIS_API_KEY", "\"${localProps["arcgis.api.key"]}\"")
+        buildConfigField("String", "ARCGIS_API_KEY", "\"$arcgisApiKey\"")
     }
 
     buildFeatures {
@@ -35,7 +37,7 @@ android {
     buildTypes {
         release {
             optimization {
-                enable = false
+                enable = true
             }
         }
     }

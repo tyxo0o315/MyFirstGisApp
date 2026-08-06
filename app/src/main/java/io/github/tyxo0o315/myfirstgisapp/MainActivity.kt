@@ -1,4 +1,4 @@
-package com.example.myfirstgisapp
+package io.github.tyxo0o315.myfirstgisapp
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        ArcGISRuntimeEnvironment.setApiKey(BuildConfig.ARCGIS_API_KEY)
+        configureArcGisApiKey()
 
         loadingCard = findViewById(R.id.loadingCard)
         mapView = findViewById(R.id.mapView)
@@ -152,6 +152,15 @@ class MainActivity : AppCompatActivity() {
         setupStatsButton()
         requestLocationPermission()
         setupMyLocationButton()
+    }
+
+    private fun configureArcGisApiKey() {
+        if (BuildConfig.ARCGIS_API_KEY.isBlank()) {
+            Log.w("MyFirstGisApp", "ArcGIS API key is not configured in local.properties")
+            Toast.makeText(this, "ArcGIS API Key 未配置，底图服务可能无法加载", Toast.LENGTH_LONG).show()
+            return
+        }
+        ArcGISRuntimeEnvironment.setApiKey(BuildConfig.ARCGIS_API_KEY)
     }
 
     private fun setupZoomButtons() {

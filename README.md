@@ -1,5 +1,7 @@
 # MyFirstGisApp
 
+[![Android CI](https://github.com/tyxo0o315/MyFirstGisApp/actions/workflows/android.yml/badge.svg)](https://github.com/tyxo0o315/MyFirstGisApp/actions/workflows/android.yml)
+
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white" />
   <img src="https://img.shields.io/badge/Language-Kotlin-7F52FF?logo=kotlin&logoColor=white" />
@@ -66,7 +68,7 @@
 
 ```
 app/src/main/
-├── java/com/example/myfirstgisapp/
+├── java/io/github/tyxo0o315/myfirstgisapp/
 │   └── MainActivity.kt          # All app logic
 └── res/
     ├── layout/
@@ -76,6 +78,10 @@ app/src/main/
     ├── drawable/                 # Vector icons & shape backgrounds
     └── values/                  # Colors, strings, themes
 ```
+
+### Build Verification
+
+GitHub Actions runs `./gradlew testDebugUnitTest assembleDebug` on every push and pull request. The app also warns at startup when `arcgis.api.key` is missing from `local.properties`, instead of silently injecting an invalid key.
 
 ---
 
@@ -128,6 +134,10 @@ app/src/main/
 ### 安全说明
 
 ArcGIS API Key 通过 `local.properties` 注入 `BuildConfig`，该文件已加入 `.gitignore`，**不会上传至版本库**，可放心使用。
+
+### 构建验证
+
+GitHub Actions 会在每次 push 和 pull request 时运行 `./gradlew testDebugUnitTest assembleDebug`。如果本地没有配置 `arcgis.api.key`，应用启动时会明确提示，而不是静默注入无效 key。
 
 ---
 
