@@ -1,6 +1,5 @@
 [versions]
 agp = "9.2.1"
-kotlin = "2.3.21"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -26,4 +25,3 @@ androidx-cardview = { group = "androidx.cardview", name = "cardview", version.re
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
